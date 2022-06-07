@@ -4,6 +4,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  margin-bottom: 100px;
   &-content {
     max-width: 520px;
     width: 100%;
@@ -36,7 +37,6 @@
     text-transform: uppercase;
     cursor: pointer;
     position: relative;
-    isolation: isolate;
     &::before {
       content: "";
       position: absolute;
@@ -46,7 +46,7 @@
       background-color: rgba(0, 0, 0, 0.6);
       width: 0;
       height: 100%;
-      transition: all 0.25s linear;
+      transition: all 0.2s linear;
     }
     &:hover::before {
       width: 100%;

@@ -1,0 +1,24 @@
+.banner {
+  background-image: url("../images/Bg-banner.png");
+  min-height: 952px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  &-content {
+    max-width: 520px;
+    width: 100%;
+    padding-top: 320px;
+  }
+  &-heading {
+    font-size: 60px;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 22px;
+  }
+  &-slogan {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 32px;
+  }
+}
