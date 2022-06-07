@@ -1,0 +1,13 @@
+.header {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 24px 0;
+  &-main {
+    display: flex;
+    align-items: center;
+  }
+  &-menu {
+    display: flex;
+    align-items: center;
+    gap: 0 54px;
+  }
+}

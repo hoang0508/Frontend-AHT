@@ -1,0 +1,31 @@
+@media screen and (max-width: 1023.98px) {
+  // header
+  .header {
+    &-logo {
+      -webkit-order: 2;
+    }
+    &-menu {
+      -webkit-order: 1;
+      position: fixed;
+      width: 100%;
+      max-width: 300px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #fff;
+      z-index: 10;
+      display: flex;
+      justify-content: stretch;
+      align-items: stretch;
+      flex-direction: column;
+      &--link {
+        display: block;
+        color: $primary-color;
+        padding: 20px 0;
+      }
+    }
+    &-tool {
+      -webkit-order: 3;
+    }
+  }
+}
