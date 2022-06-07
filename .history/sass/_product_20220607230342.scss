@@ -1,5 +1,5 @@
 .product {
-  padding-bottom: 137px;
+  padding-bottom: 200px;
   &-tab {
     display: flex;
     align-items: center;
@@ -12,13 +12,9 @@
       font-size: 18px;
       font-weight: 700;
       position: relative;
-      cursor: pointer;
     }
   }
   &-list {
-    display: none;
-  }
-  &-list.active-product {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 60px;

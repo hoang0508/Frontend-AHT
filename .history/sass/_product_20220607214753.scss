@@ -1,0 +1,30 @@
+.product {
+  padding-bottom: 200px;
+  &-tab {
+    display: flex;
+    align-items: center;
+    gap: 0 40px;
+    padding-bottom: 21px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid $gray-light;
+    &--action {
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0 60px;
+  }
+  &-name {
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  &-price {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}

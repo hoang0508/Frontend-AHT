@@ -103,6 +103,7 @@ body {
   top: 0;
   right: 0;
   left: 0;
+  z-index: 30;
 }
 .header-main {
   display: flex;
@@ -256,6 +257,103 @@ body {
   color: #777;
   font-size: 14px;
   line-height: 1.7142857143;
+}
+
+.product {
+  padding-bottom: 137px;
+}
+.product-tab {
+  display: flex;
+  align-items: center;
+  gap: 0 40px;
+  padding-bottom: 21px;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #dddddd;
+}
+.product-tab--action {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 700;
+  position: relative;
+  cursor: pointer;
+}
+.product-list {
+  display: none;
+}
+.product-list.active-product {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 60px;
+}
+.product-item {
+  padding: 21px 32px 36px 10px;
+  position: relative;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.25s linear;
+}
+.product-item:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.product-item:hover .product-select {
+  opacity: 1;
+  visibility: visible;
+}
+.product-item--image {
+  height: 190px;
+  margin-bottom: 50px;
+}
+.product-item--image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.product-name {
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.product-price {
+  font-size: 14px;
+  font-weight: 700;
+}
+.product-select {
+  position: absolute;
+  right: 21px;
+  top: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+.product-select--icon {
+  color: #777;
+  padding: 12px;
+  border: 1px solid #dddddd;
+  border-radius: 5px 0 5px 0;
+  transition: all 0.25s linear;
+}
+.product-select--icon:hover {
+  background-color: #dd2f31;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.is-active {
+  color: #dd2f31;
+}
+.is-active::after {
+  content: "";
+  position: absolute;
+  width: 144px;
+  height: 3px;
+  background-color: #dd2f31;
+  left: 0;
+  bottom: -23px;
 }
 
 @media screen and (min-width: 1024px) {

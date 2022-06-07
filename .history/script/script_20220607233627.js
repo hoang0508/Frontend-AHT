@@ -28,11 +28,5 @@ function handleIsAvtive(e) {
   // get data
   const tabNumber = e.target.dataset.tab;
 
-  [...productList].forEach((item) => {
-    item.classList.remove("active-product");
-
-    if (item.getAttribute("data-tab") === tabNumber) {
-      item.classList.add("active-product");
-    }
-  });
+  [...productList].forEach((iten) => item.classList.remove("active-product"));
 }

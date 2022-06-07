@@ -14,25 +14,12 @@ scrim.addEventListener("click", () => {
 
 // Active Tab Product
 const tabActive = document.querySelectorAll(".product-tab--action");
-const productList = document.querySelectorAll(".product-list");
-//
+
 [...tabActive].forEach((item) =>
   item.addEventListener("click", handleIsAvtive)
 );
 
 function handleIsAvtive(e) {
-  // Tab is-active
   [...tabActive].forEach((item) => item.classList.remove("is-active"));
   e.target.classList.add("is-active");
-
-  // get data
-  const tabNumber = e.target.dataset.tab;
-
-  [...productList].forEach((item) => {
-    item.classList.remove("active-product");
-
-    if (item.getAttribute("data-tab") === tabNumber) {
-      item.classList.add("active-product");
-    }
-  });
 }
