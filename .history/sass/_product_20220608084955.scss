@@ -83,7 +83,6 @@
 }
 .is-active {
   color: #dd2f31;
-  transition: all 0.25s linear;
   &::after {
     content: "";
     position: absolute;

@@ -92,22 +92,14 @@
       -webkit-order: 1;
     }
   }
-  // Product
-  .product {
-    &-list.active-product {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
 }
 
-// Phone
 @media screen and (max-width: 767.98px) {
   // Toggle
   .menu-toggle {
     width: 100px;
   }
-  // Banner
+  //
   .banner {
     min-height: 400px;
     &-content {
@@ -148,60 +140,6 @@
     }
     &-title {
       font-size: 16px;
-      margin-bottom: 15px;
-    }
-    &-desc {
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      word-break: break-word;
-    }
-  }
-  // Product
-  .product {
-    padding-bottom: 80px;
-    &-tab--action {
-      font-size: 16px;
-    }
-    &-list.active-product {
-      display: grid;
-      justify-content: flex-start;
-      grid-auto-columns: 300px;
-      grid-auto-flow: column;
-      grid-gap: 1.5rem;
-      overflow: auto;
-      overflow-y: hidden;
-      scroll-snap-type: x mandatory;
-      scroll-snap-stop: always;
-      -ms-touch-action: manipulation;
-      touch-action: manipulation;
-      -webkit-overflow-scrolling: touch;
-      scroll-padding: 1rem;
-      grid-template-columns: unset;
-    }
-    &-list.active-product::-webkit-scrollbar {
-      display: none;
-      width: 0;
-    }
-    &-list.active-product > * {
-      scroll-snap-align: start;
-    }
-  }
-  // about
-  .about {
-    &-heading {
-      margin-bottom: 40px;
-      line-height: calc(30 / 26);
-    }
-    &-desc {
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      word-break: break-word;
       margin-bottom: 15px;
     }
   }

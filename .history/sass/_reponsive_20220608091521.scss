@@ -1,0 +1,114 @@
+// DeskTop
+@media screen and (min-width: 1024px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+
+// Tablet
+@media screen and (max-width: 1023.98px) {
+  // header
+  .header {
+    &-logo {
+      -webkit-order: 2;
+    }
+    &-menu {
+      -webkit-order: 1;
+      position: fixed;
+      width: 100%;
+      max-width: 300px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background-color: #fff;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      z-index: 20;
+      display: flex;
+      justify-content: stretch;
+      align-items: stretch;
+      flex-direction: column;
+      transform: translateX(-100%);
+      transition: all 0.25s linear;
+      &.show {
+        transform: translateX(0);
+      }
+      &--link {
+        display: block;
+        color: $primary-color;
+        padding: 20px;
+        font-size: 18px;
+      }
+    }
+    &-tool {
+      -webkit-order: 3;
+    }
+  }
+  .menu-toggle {
+    width: 200px;
+    color: #fff;
+    font-size: 27px;
+    cursor: pointer;
+  }
+  .scrim {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    &.show-scrim {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  // Banner
+  .banner {
+    min-height: 700px;
+    &-content {
+      padding-top: 200px;
+    }
+  }
+  // Category
+  .category {
+    padding-bottom: 80px;
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &-item:nth-child(1) {
+      -webkit-order: 2;
+    }
+    &-item:nth-child(2) {
+      -webkit-order: 3;
+    }
+    &-item:nth-child(3) {
+      -webkit-order: 2;
+    }
+    &-item:nth-child(4) {
+      -webkit-order: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  // Toggle
+  .menu-toggle {
+    width: 100px;
+  }
+  //
+  .banner {
+    min-height: 400px;
+    &-heading {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+    &-slogan {
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+  }
+}

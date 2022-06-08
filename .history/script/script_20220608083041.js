@@ -38,13 +38,10 @@ function handleIsAvtive(e) {
 }
 
 // slick slider
-
 $(".about-main").slick({
   dots: true,
   infinite: true,
   speed: 300,
   slidesToShow: 1,
   adaptiveHeight: true,
-  prevArrow: false,
-  nextArrow: false,
 });

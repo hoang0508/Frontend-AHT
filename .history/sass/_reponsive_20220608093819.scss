@@ -189,20 +189,4 @@
       scroll-snap-align: start;
     }
   }
-  // about
-  .about {
-    &-heading {
-      margin-bottom: 40px;
-      line-height: calc(30 / 26);
-    }
-    &-desc {
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      word-break: break-word;
-      margin-bottom: 15px;
-    }
-  }
 }
