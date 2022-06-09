@@ -1,0 +1,55 @@
+.banner {
+  background-image: url("../images/Bg-banner.png");
+  min-height: 952px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  &-content {
+    max-width: 520px;
+    width: 100%;
+    padding-top: 306px;
+  }
+  &-heading {
+    font-size: 60px;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 22px;
+  }
+  &-slogan {
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 32px;
+  }
+  &-text {
+    color: #ffffff;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    margin-bottom: 48px;
+  }
+  &-button {
+    font-family: $font-primary;
+    padding: 21px 50px;
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    isolation: isolate;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-color: rgba(0, 0, 0, 0.6);
+      width: 0;
+      height: 100%;
+      transition: all 0.25s linear;
+    }
+    &:hover::before {
+      width: 100%;
+    }
+  }
+}

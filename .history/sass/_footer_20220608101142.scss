@@ -1,0 +1,23 @@
+.footer {
+  background-color: $secondary-color;
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 100px 0 57px;
+  }
+  &-logo {
+    margin-bottom: 40px;
+  }
+  &-desc {
+    max-width: 712px;
+    width: 100%;
+    color: $text-color;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: calc(24 / 14);
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
