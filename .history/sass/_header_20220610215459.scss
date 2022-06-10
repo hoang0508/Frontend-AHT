@@ -94,10 +94,6 @@
         cursor: pointer;
         width: 20px;
         height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 14px;
         background-color: #f00;
         color: #fff;
       }
@@ -125,10 +121,6 @@
       visibility: visible;
     }
   }
-}
-
-.hidden-cart {
-  display: block;
 }
 
 .hidden-cart.show {
