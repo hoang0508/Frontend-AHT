@@ -1,0 +1,30 @@
+.login {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 40;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-main {
+    background-color: #fff;
+    padding: 25px 20px;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 5px;
+  }
+  &-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  &-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+  }
+}

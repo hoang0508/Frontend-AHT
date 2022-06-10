@@ -1,0 +1,81 @@
+.login {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 40;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  &.show-login {
+    opacity: 1;
+    visibility: visible;
+  }
+  &-main {
+    background-color: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 25px 20px;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 5px;
+  }
+  &-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  &-content {
+    &--group {
+      margin-bottom: 30px;
+    }
+    &--input {
+      position: relative;
+    }
+    &--input input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #eee;
+      border-radius: 5px;
+    }
+  }
+  &-label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .icon-input {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: $text-color;
+    cursor: pointer;
+  }
+  &-text--email,
+  &-text--password {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+  }
+  &-btn {
+    margin: 0 auto;
+    max-width: 300px;
+    display: block;
+    padding: 18px 50px;
+    font-size: 18px;
+    background-color: #4cb8c4;
+    color: #fff;
+    outline: none;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}

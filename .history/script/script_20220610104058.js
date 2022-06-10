@@ -64,7 +64,7 @@ window.addEventListener("scroll", handlePageDown);
 
 // Validate Form, submit form
 const headerUser = document.querySelector(".header-user");
-const loginClose = document.querySelector(".login-close");
+const loginClose = document.querySelector("login-close");
 const loginForm = document.querySelector(".login");
 const loginTextEmail = document.querySelector(".login-text--email");
 const loginTextPassword = document.querySelector(".login-text--password");
@@ -113,29 +113,3 @@ headerUser.addEventListener("click", () => {
 loginClose.addEventListener("click", () => {
   loginForm.classList.remove("show-login");
 });
-
-// Search
-const search = document.querySelector(".header-search");
-const inputSearch = document.querySelector(".search");
-search.addEventListener("click", () => {
-  inputSearch.classList.toggle("show-search");
-});
-
-// Product
-const product = [
-  {
-    id: 1,
-    name: "",
-    price: 342.0,
-  },
-  {
-    id: 2,
-    name: "",
-    price: 342.0,
-  },
-  {
-    id: 3,
-    name: "",
-    price: 342.0,
-  },
-];

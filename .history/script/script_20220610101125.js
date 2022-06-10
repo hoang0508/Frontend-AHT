@@ -63,11 +63,8 @@ function handlePageDown(e) {
 window.addEventListener("scroll", handlePageDown);
 
 // Validate Form, submit form
-const headerUser = document.querySelector(".header-user");
-const loginClose = document.querySelector(".login-close");
+
 const loginForm = document.querySelector(".login");
-const loginTextEmail = document.querySelector(".login-text--email");
-const loginTextPassword = document.querySelector(".login-text--password");
 loginForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
@@ -76,66 +73,4 @@ loginForm.addEventListener("submit", function (e) {
 
   const regexEmail =
     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-  // Email
-  if (!regexEmail.test(email)) {
-    loginTextEmail.textContent =
-      "You need to enter the correct email character";
-    loginTextEmail.style.color = "#f00";
-  } else {
-    loginTextEmail.textContent = "Email with correct syntax";
-    loginTextEmail.style.color = "#3CA55C";
-  }
-
-  // Password
-  if ((password.length = "")) {
-    loginTextPassword.textContent = "You need to enter a password";
-    loginTextPassword.style.color = "#f00";
-  } else if (password.length < 8) {
-    loginTextPassword.textContent =
-      "You need to enter a password over 8 characters ";
-    loginTextPassword.style.color = "#f00";
-  } else if (/[A-Z]/.test(password)) {
-    loginTextPassword.textContent =
-      " Password contains at least capital letters";
-    loginTextPassword.style.color = "#f00";
-  } else {
-    loginTextPassword.textContent = "Password with correct syntax";
-    loginTextPassword.style.color = "#3CA55C";
-  }
 });
-
-//
-headerUser.addEventListener("click", () => {
-  loginForm.classList.add("show-login");
-});
-
-loginClose.addEventListener("click", () => {
-  loginForm.classList.remove("show-login");
-});
-
-// Search
-const search = document.querySelector(".header-search");
-const inputSearch = document.querySelector(".search");
-search.addEventListener("click", () => {
-  inputSearch.classList.toggle("show-search");
-});
-
-// Product
-const product = [
-  {
-    id: 1,
-    name: "",
-    price: 342.0,
-  },
-  {
-    id: 2,
-    name: "",
-    price: 342.0,
-  },
-  {
-    id: 3,
-    name: "",
-    price: 342.0,
-  },
-];

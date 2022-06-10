@@ -116,26 +116,7 @@ loginClose.addEventListener("click", () => {
 
 // Search
 const search = document.querySelector(".header-search");
-const inputSearch = document.querySelector(".search");
+const inputSearch = document.querySelector(".input-search");
 search.addEventListener("click", () => {
   inputSearch.classList.toggle("show-search");
 });
-
-// Product
-const product = [
-  {
-    id: 1,
-    name: "",
-    price: 342.0,
-  },
-  {
-    id: 2,
-    name: "",
-    price: 342.0,
-  },
-  {
-    id: 3,
-    name: "",
-    price: 342.0,
-  },
-];
