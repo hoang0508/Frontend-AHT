@@ -73,14 +73,10 @@
       opacity: 1;
       visibility: visible;
     }
-    .icon-basket::before {
+    .icon-basket::after {
       content: "";
       position: absolute;
-      top: 30px;
-      right: 0;
-      left: 0;
-      width: 300px;
-      background: none;
+      top: -60px;
     }
     .popup-cart {
       position: absolute;

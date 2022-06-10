@@ -212,6 +212,19 @@ body {
   justify-content: center;
   align-items: center;
 }
+.header-tool .icon-basket:hover .popup-cart {
+  opacity: 1;
+  visibility: visible;
+}
+.header-tool .icon-basket::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  right: 0;
+  left: 0;
+  width: 300px;
+  background: none;
+}
 .header-tool .popup-cart {
   position: absolute;
   right: 0;
@@ -222,6 +235,9 @@ body {
   width: 300px;
   padding: 5px;
   text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
 }
 .header-tool .popup-cart--item:not(:last-child) {
   margin-bottom: 15px;
