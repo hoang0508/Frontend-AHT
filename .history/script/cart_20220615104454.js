@@ -84,9 +84,13 @@ popupCart.addEventListener("click", (e) => {
       countId
     );
 
-    productCart = productCart.filter((item) => item.id != Number(countId));
+    const cart = productCart.filter((item) => item.id != Number(countId));
+    console.log(
+      "🚀 ~ file: cart.js ~ line 88 ~ popupCart.addEventListener ~ cart",
+      cart
+    );
 
     nunber.textContent = productCart.length;
-    localStorage.setItem("ShoppingCart", JSON.stringify(productCart));
+    localStorage.setItem("ShoppingCart", JSON.stringify(cart));
   }
 });

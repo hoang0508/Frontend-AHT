@@ -75,18 +75,22 @@ UpdateProductHTML();
 
 popupCart.addEventListener("click", (e) => {
   if (e.target.classList.contains("icon-remove")) {
+    console.log(e);
     const cartItem = e.target.parentNode.parentNode;
     cartItem.parentNode.removeChild(cartItem);
 
-    let countId = e.target.getAttribute("data-product-id");
+    // let countId = e.target.getAtribute("class");
+    // console.log(
+    //   "🚀 ~ file: cart.js ~ line 82 ~ popupCart.addEventListener ~ countId",
+    //   countId
+    // );
+
+    const cart = productCart.filter((item) => item.id !== countId);
     console.log(
-      "🚀 ~ file: cart.js ~ line 83 ~ popupCart.addEventListener ~ countId",
-      countId
+      "🚀 ~ file: cart.js ~ line 77 ~ popupCart.addEventListener ~ cart",
+      cart
     );
-
-    productCart = productCart.filter((item) => item.id != Number(countId));
-
     nunber.textContent = productCart.length;
-    localStorage.setItem("ShoppingCart", JSON.stringify(productCart));
+    localStorage.setItem("ShoppingCart", JSON.stringify(cart));
   }
 });

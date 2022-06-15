@@ -75,18 +75,15 @@ UpdateProductHTML();
 
 popupCart.addEventListener("click", (e) => {
   if (e.target.classList.contains("icon-remove")) {
+    console.log(e);
     const cartItem = e.target.parentNode.parentNode;
     cartItem.parentNode.removeChild(cartItem);
 
     let countId = e.target.getAttribute("data-product-id");
-    console.log(
-      "🚀 ~ file: cart.js ~ line 83 ~ popupCart.addEventListener ~ countId",
-      countId
-    );
 
-    productCart = productCart.filter((item) => item.id != Number(countId));
+    const cart = productCart.filter((item) => item.id !== Number(countId));
 
     nunber.textContent = productCart.length;
-    localStorage.setItem("ShoppingCart", JSON.stringify(productCart));
+    localStorage.setItem("ShoppingCart", JSON.stringify(cart));
   }
 });

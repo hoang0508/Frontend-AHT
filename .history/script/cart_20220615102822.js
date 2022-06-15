@@ -54,8 +54,8 @@ const UpdateProductHTML = () => {
         <h3 class="popup-cart--name">${item.name}</h3>
         <div class="popup-cart--price">${item.price}</div>
       </div>
-      <div class="popup-cart--remove">
-       <i class="fas fa-times icon-remove"  data-product-id="${item.id}"></i>
+      <div class="popup-cart--remove" data-product-id="${item.id}">
+       <i class="fas fa-times icon-remove"></i>
       </div>
     </div>
       `;
@@ -78,15 +78,18 @@ popupCart.addEventListener("click", (e) => {
     const cartItem = e.target.parentNode.parentNode;
     cartItem.parentNode.removeChild(cartItem);
 
-    let countId = e.target.getAttribute("data-product-id");
+    let countId = e.target.dataset.productId;
     console.log(
-      "🚀 ~ file: cart.js ~ line 83 ~ popupCart.addEventListener ~ countId",
+      "🚀 ~ file: cart.js ~ line 82 ~ popupCart.addEventListener ~ countId",
       countId
     );
 
-    productCart = productCart.filter((item) => item.id != Number(countId));
-
+    const cart = productCart.filter((item) => item.id !== countId);
+    console.log(
+      "🚀 ~ file: cart.js ~ line 77 ~ popupCart.addEventListener ~ cart",
+      cart
+    );
     nunber.textContent = productCart.length;
-    localStorage.setItem("ShoppingCart", JSON.stringify(productCart));
+    localStorage.setItem("ShoppingCart", JSON.stringify(cart));
   }
 });

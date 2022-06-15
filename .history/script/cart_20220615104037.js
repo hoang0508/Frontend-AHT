@@ -75,6 +75,7 @@ UpdateProductHTML();
 
 popupCart.addEventListener("click", (e) => {
   if (e.target.classList.contains("icon-remove")) {
+    console.log(e);
     const cartItem = e.target.parentNode.parentNode;
     cartItem.parentNode.removeChild(cartItem);
 
@@ -84,9 +85,9 @@ popupCart.addEventListener("click", (e) => {
       countId
     );
 
-    productCart = productCart.filter((item) => item.id != Number(countId));
+    const cart = productCart.filter((item) => item.id != Number(countId));
 
     nunber.textContent = productCart.length;
-    localStorage.setItem("ShoppingCart", JSON.stringify(productCart));
+    localStorage.setItem("ShoppingCart", JSON.stringify(cart));
   }
 });
